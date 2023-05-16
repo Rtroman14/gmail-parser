@@ -1,0 +1,7 @@
+gcloud config set project gmail-parser-386517
+
+gcloud run deploy lead-gen \
+    --allow-unauthenticated \
+    --region=us-central1 \
+    --timeout=1m \
+    --env-vars-file=.env.yaml
