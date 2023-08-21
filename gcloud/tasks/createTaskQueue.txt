@@ -1,0 +1,20 @@
+https://cloud.google.com/sdk/gcloud/reference/tasks/queues/create
+
+Retry every 10 minutes
+
+If 50 tasks and each takes 60 minutes:
+- 50 hours || 3,000 minutes || 180,000 seconds
+- 
+
+10 minutes = 60s * 10 = 600
+
+
+gcloud tasks queues create reonomy-scraper-coordinates-test \
+    --max-attempts=100 \
+    --max-retry-duration=75000s \
+    --min-backoff=600s \
+    --max-backoff=900s \
+    --max-doublings=2 \
+    --max-concurrent-dispatches=1
+
+gcloud tasks queues describe reonomy-scraper-coordinates-test

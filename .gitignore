@@ -1,0 +1,10 @@
+node_modules
+.env*
+.DS_store
+token.json
+credentials.json
+deploy.txt
+
+token.json
+serviceAccountKey.json
+credentials.json
